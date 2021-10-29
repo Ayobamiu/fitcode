@@ -399,16 +399,20 @@
   position: absolute;
   top: -100px;
 }
+.show-900 {
+  display: none;
+}
 @media screen and (max-width: 1200px) {
   #hompage-one {
     background-size: cover;
   }
   #homepage-one-float {
     position: relative;
-    width: 90%;
+    width: 100%;
     height: auto;
     bottom: unset;
   }
+
   .homepage-one-circle {
     display: none;
   }
@@ -423,12 +427,31 @@
   #hompage-two {
     padding-top: 30px;
   }
+  #hompage-three {
+    padding: 30px;
+  }
   #homepage-four {
     height: auto;
   }
 
   .height-to-wrap {
     height: auto;
+  }
+  .homepage-eight-card {
+    margin: 10px 0;
+  }
+  #homepage-nine {
+    text-align: center;
+  }
+  .float-logo {
+    position: relative;
+    top: unset;
+  }
+  .hide-900 {
+    display: none;
+  }
+  .show-900 {
+    display: block;
   }
 }
 .fit-btn-p {

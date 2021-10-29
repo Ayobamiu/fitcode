@@ -18,6 +18,7 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import {
+  faBars,
   faCalendarAlt,
   faChalkboardTeacher,
   faClock,
@@ -43,15 +44,57 @@ export default function HomePage() {
             <div className="logo">
               <img src={FitCodeLogo} alt="" className="" />
             </div>
-            <div className="nav-item  mr-3 active font-bold ml-100">HOME</div>
-            <div className="nav-item mx-3 font-bold">ABOUT</div>
-            <div className="nav-item me-auto ml-3 font-bold">PROJECTS</div>
-            <button className="mx-3 fit-btn-p btn rounded bg-white rounded-pill shadow">
+            <div className="nav-item  mr-3 active font-bold ml-100 hide-900">
+              HOME
+            </div>
+            <div className="nav-item mx-3 font-bold hide-900">ABOUT</div>
+            <div className="nav-item me-auto ml-3 font-bold hide-900">
+              PROJECTS
+            </div>
+            <button className="mx-3 fit-btn-p btn rounded bg-white rounded-pill shadow hide-900">
               TRACKS
             </button>
-            <button className="mx-2 fit-btn-p btn rounded-pill primary-bg text-white shadow">
+            <button className="mx-2 fit-btn-p btn rounded-pill primary-bg text-white shadow hide-900">
               REGISTER
             </button>
+            <div class="dropdown">
+              <FontAwesomeIcon
+                icon={faBars}
+                size="lg"
+                className="show-900"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <span class="dropdown-item" href="#">
+                    HOME
+                  </span>
+                  <span class="dropdown-item" href="#">
+                    ABOUT
+                  </span>
+                  <span class="dropdown-item" href="#">
+                    PROJECTS
+                  </span>
+                </li>
+                <li>
+                  <div className="dropdown-item">
+                    <button className="fit-btn-p btn rounded bg-white rounded-pill shadow ">
+                      TRACKS
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div className="dropdown-item">
+                    <button className="fit-btn-p btn rounded-pill primary-bg text-white shadow ">
+                      REGISTER
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </nav>
 
           <div className="row my-2 my-md-5">
@@ -353,7 +396,7 @@ export default function HomePage() {
         </div>
       </section>
       <section id="homepage-five">
-        <div className="text-center py-5 d-flex flex-column justify-content-center align-items-center">
+        <div className="text-center p-2 py-5 d-flex flex-column justify-content-center align-items-center">
           <h1 className="mt-5 text-white">Our Office Space</h1>
           <p className="my-3 text-white">
             Quickly build solutions like programmable messages, 2FA, appointment
@@ -588,7 +631,7 @@ export default function HomePage() {
             </div>
             <h4 className="mb-5">Explore Our Best Options</h4>
           </div>
-          <div className="d-flex justify-content-around align-items-center">
+          <div className="d-flex justify-content-around align-items-center flex-wrap">
             <div className="homepage-eight-card bg-white py-3">
               <div className="x-small-icon-badge bg-success mx-auto mb-3">
                 <FontAwesomeIcon icon={faClock} color="white" size="lg" />
